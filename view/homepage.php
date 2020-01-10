@@ -9,7 +9,7 @@
               $pic = $picinfo->getFilename();
 
               if ($pic == 'index.php' or $pic == 'Logo.png' or $pic =='.' or $pic =='..') {
-
+                //This isn't ideal. Need to figure out why != isn't working, something with variable type? For now this is outputting the pictures correctly but there has to be a better to implement this.
               } else {
                 if ($pic == 'LeShan-Buddha.JPG') {
                   echo   '<div class="carousel-item active">
