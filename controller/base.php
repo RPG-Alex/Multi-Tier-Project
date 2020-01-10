@@ -9,7 +9,7 @@ define('DB_NAME', 'sino-lifestyle');
 // App Root
 define('APPROOT', dirname(dirname(__FILE__)));
 // URL Root THIS WILL NEED TO BE CONFIGURED WHEN LIVE TO CORRECT URL PATH
-define('URLROOT', 'http://192.168.6.44/Multi-Tier-Consultation');
+define('URLROOT', 'http://localhost/Multi-Tier-Consultation');
 // Site Name
 define('SITENAME', 'Sino-Western Lifestyle Consulting');
 //SIte logo

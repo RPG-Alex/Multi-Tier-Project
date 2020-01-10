@@ -2,10 +2,13 @@ Design database
 Rework the page loader correctly
 Decide if cart should be javascript? (maybe yes?)
 Design homepage view
-Review how to use bootstrap
-Make header a sandwich menu
-Decide on a color scheme
+Fix carousel image sizes!
+
+
 
 
 Finished:
 Put index.php into all sub directories that redirects to the app root.
+Make header a sandwich menu
+Review how to use bootstrap
+Decide on a color scheme

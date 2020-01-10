@@ -1,5 +1,8 @@
-.navbar-brand img {
+.navbar-brand .logo {
   height: 40px;
   float: left;
   margin-right: 7px;
+}
+.carousel-inner {
+   max-height: 400px;
 }
