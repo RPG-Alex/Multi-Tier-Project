@@ -1,13 +1,19 @@
-<div class="container container-section">
+<?php
+$getFaqs = new SiteDetails;
+$faqs = $getFaqs->getAllQandA();
+ ?>
   <ol>
-    <div class="quesstion-answer">
-      <div class="question">
-      <li>question
-        </div>
-        <div class="answer">
-          answer
-        </div>
-      </li>
-    </div>
+    <?php
+    foreach ($faqs as $faq) {
+      echo "<div class='question-answer'>
+        <div class='question'>
+        <li> <b>question</b> $faq->question
+          </div>
+          <div class='answer'>
+            <b>answer</b> $faq->answer
+          </div>
+        </li>
+      </div>";
+    }
+     ?>
   </ol>
-</div>

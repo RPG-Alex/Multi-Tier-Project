@@ -1,11 +1,9 @@
 <?php
-require_once APPROOT."/controller/store.php";
-$getServices = new Store;
+$getServices = new SiteDetails;
 $allServices = $getServices->getAllServices();
 
  ?>
 
-<div class="container container-section">
   <form class="contact-us" action="" method="post">
   <input type="email" name="email" placeholder="Your Email Address">
   <input type="text" name="contactMessage" placeholder="Specific Concerns">
@@ -17,4 +15,3 @@ $allServices = $getServices->getAllServices();
   </select>
   <input type="submit" name="submit" value="submit">
   </form>
-</div>

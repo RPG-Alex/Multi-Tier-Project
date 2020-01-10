@@ -1,3 +1,4 @@
+
   <div class="jumbotron">
     <h1 class="font-weight-bold">Details about work and life in China are just a click away!</h1>
     <h2 class = "justify">Operating since 2019, our concern is answering your questions and guiding you to your ideal goals in China!</h2>
@@ -23,15 +24,6 @@
               }
         }
        ?>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
-
   </div>
 </div>

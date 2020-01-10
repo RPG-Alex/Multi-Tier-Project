@@ -8,6 +8,10 @@ if (isset($_GET['page'])) {
     if ($_GET['page'] === 'store') {
         require_once APPROOT."/controller/store.php";
         }
+        if ($_GET['page'] =='faq' or $_GET['page'] =='contact') {
+          require_once APPROOT."/model/Database.class.php";
+          require_once APPROOT."/model/SiteDetails.class.php";
+        }
     $page->viewToLoad($_GET['page']);
 
 }
