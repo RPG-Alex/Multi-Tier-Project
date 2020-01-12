@@ -3,22 +3,24 @@
 <section class='container content-section'>
     <h2 class='section-header'>Services:</h2>
     <div class='shop-items'>
+
         <?php
         $serviceCall = new Store;
         $services = $serviceCall->getAllServices();
         foreach ($services as $service) {
-          echo "<div class='shop-item'>
+          echo "<form action='' method='post'><div class='shop-item'>
               <span class='shop-item-title'>$service->service</span>
               <div class='shop-item-details'>
                 <span class='shop-item-detail'>$service->description</span>
                   <span class='shop-item-price'>£$service->price</span>
-                  <div class='invisible'>$service->sid</div>
-                  <button class='btn btn-primary shop-item-button' type='button'>purchase</button>
+                  <input type='hidden' name='serviceid' value='$service->sid'>
+                  <input type='submit' name='purchase' class='btn btn-primary shop-item-button' value='purchase'>
               </div>
-          </div>";
+          </div>
+          </form>";
         }
          ?>
-    </div>
+  </div>
 </section>
 <section class='container content-section'>
     <h2 class='section-header'>CART</h2>
@@ -26,13 +28,37 @@
         <span class='cart-item cart-header cart-column'>Service Name</span>
         <span class='cart-price cart-header cart-column'>PRICE</span>
     </div>
-    <div class='cart-items'>
-      </div>
+      <?php
+      $myCart = $serviceCall->retrieveCartItems($_COOKIE['PHPSESSID']);
+      $i=0;
+      if(isset($myCart)){
+      foreach ($myCart as $cartItems) {
+        $i=$i +$cartItems->price;
+        echo "<div class='cart-row'><div class='cart-item cart-column'>
+            <span class='cart-item-title'>$cartItems->service</span>
+        </div>
+        <span class='cart-price cart-column'>£$cartItems->price</span>
+        <div class='cart-column'>
+            <form action='' method='post'><input type='submit' class='btn btn-danger' name='remove' value='remove'><input type='hidden' value='$cartItems->sid' name='serviceid'></form>
+        </div></div>";
+      }} else {
+        echo "Your cart is empty! try buying something!";
+      }
+       ?>
+
       <div class='cart-total'>
           <strong class='cart-total-title'>Total</strong>
-          <span class='cart-total-price'></span>
+          <span class='cart-total-price'>
+            <?php
+            echo $i;
+             ?>
+          </span>
           <strong class='cart-total-title-tax'>Total with tax at 20%</strong>
-          <span class='cart-total-price-tax'></span>
+          <span class='cart-total-price-tax'>
+            <?php
+            echo ($i*.20)+$i;
+             ?>
+          </span>
       </div>
     <button class='btn btn-primary btn-purchase' type='button'>PURCHASE</button>
 </section>

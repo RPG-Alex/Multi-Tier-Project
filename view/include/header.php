@@ -9,9 +9,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <?php
-      if ($_GET['page']== 'store') {
+      /*if ($_GET['page']== 'store') {
         echo "<script type='text/javascript' src=".URLROOT."/js/store.js></script>";
-      }
+      } */
      ?>
   </head>
   <body>

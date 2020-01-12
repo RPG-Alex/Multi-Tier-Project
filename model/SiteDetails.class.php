@@ -17,6 +17,6 @@ class SiteDetails extends Database {
   }
   public function SubmitMessage($message){
     //This function would be for submitting a message to the database, to be read later by the site admin
-    $this->db->query('INSERT INTO ')
+    $this->db->query('INSERT INTO message ()');
   }
 }
