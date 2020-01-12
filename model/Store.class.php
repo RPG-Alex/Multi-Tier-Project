@@ -27,12 +27,12 @@ class Store extends Database {
   }
   public function removeFromCart($cookieID,$itemID){
     $this->db->query('DELETE FROM cartItems WHERE cookieID = :cookieID AND item = :itemID');
-    $his->db->bind(':cookieID',$cookieID);
-    $his->db->bind(':itemID',$itemID);
-if ($this->db-execute()) {
-  return true;
-} else {
-  return false;
-}
+    $this->db->bind(':cookieID',$cookieID);
+    $this->db->bind(':itemID',$itemID);
+      if ($this->db->execute()) {
+        return true;
+      } else {
+        return false;
+      }
   }
 }

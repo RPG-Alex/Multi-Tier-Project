@@ -50,13 +50,13 @@
           <strong class='cart-total-title'>Total</strong>
           <span class='cart-total-price'>
             <?php
-            echo $i;
+            echo "£".$i;
              ?>
           </span>
           <strong class='cart-total-title-tax'>Total with tax at 20%</strong>
           <span class='cart-total-price-tax'>
             <?php
-            echo ($i*.20)+$i;
+            echo "£".(($i*.20)+$i);
              ?>
           </span>
       </div>

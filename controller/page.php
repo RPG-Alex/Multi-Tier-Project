@@ -1,9 +1,6 @@
 <?php
 require_once APPROOT."/model/Page.class.php";
 setcookie('shopping_cart');
-echo "Cookie Info";
-print_r($_COOKIE);
-echo ($_COOKIE['PHPSESSID']);
 $page = new Page;
 $page->header();
 if (!empty($_GET['page'])) {

@@ -5,5 +5,6 @@ if (isset($_POST['purchase'])) {
   $cart = new Store;
   $putInCart = $cart->insertCartItems($_COOKIE['PHPSESSID'],$_POST['serviceid']);
 } elseif (isset($_POST['remove'])) {
-  echo "removal has succeded";
+  $cartDelete = new Store;
+  $removefromCart = $cartDelete->removeFromCart($_COOKIE['PHPSESSID'],$_POST['serviceid']);
 }
