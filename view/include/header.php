@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="<?php echo PICTURES.'Logo.png'; ?>">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
   </head>
   <body>
     <div class="container container-section">
